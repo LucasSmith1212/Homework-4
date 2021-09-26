@@ -24,5 +24,29 @@ namespace Homework_4_Project_1
         {
             InitializeComponent();
         }
+
+        private void OnClick(object sender, RoutedEventArgs e)
+        {
+            string monthMortgage = monthlyMortgage.Text;
+            string outstandingBalance = OutstandingBalance.Text;
+            
+
+            double monthly = Convert.ToDouble(monthMortgage);
+            double balance = Convert.ToDouble(outstandingBalance);
+            
+
+            double monthlyInterest = 0.005325;
+
+            double interestPayment = balance * monthlyInterest;
+
+            double principalPayment = balance - interestPayment;
+
+            interestPayments.Text = "Total Interest Payment: $" + interestPayment;
+            principal.Text = "Total Principal Payment: $" + principalPayment;
+            
+
+
+
+        }
     }
 }

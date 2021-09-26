@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Homework_4_Project_1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="550" Width="1000">
     <Grid RenderTransformOrigin="0.496,0.476">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="monthlyMortgage" HorizontalAlignment="Left" Margin="269,29,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Grid.ColumnSpan="2" Height="26"/>
+        <TextBox x:Name="OutstandingBalance" HorizontalAlignment="Left" Margin="269,70,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Grid.ColumnSpan="2" Height="26"/>
+
+        <Label Content="Monthly Mortgage Payment: " HorizontalAlignment="Left" Margin="61,29,0,0" VerticalAlignment="Top" Width="161" Grid.ColumnSpan="2"/>
+        <Label Content="Outstanding Balance: " HorizontalAlignment="Left" Margin="61,70,0,0" VerticalAlignment="Top" Width="161" Grid.ColumnSpan="2"/>
+
+        <Button x:Name="PaymentButton" Content="Calculate Interest Payment" Background="Red" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="258,181,0,0" VerticalAlignment="Top" Height="41" Width="201" Click="OnClick" />
         
+        
+        <TextBox x:Name="principal" HorizontalAlignment="Left" Margin="258,0,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="201" Grid.ColumnSpan="2" Height="35" RenderTransformOrigin="8.578,0.412"/>
+        <TextBox x:Name="interestPayments" HorizontalAlignment="Left" Margin="258,316,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Grid.ColumnSpan="2" Height="35" RenderTransformOrigin="8.578,0.412"/>
+
     </Grid>
 </Window>
